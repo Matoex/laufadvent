@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laufadvendskalender</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/static/css/pixel-art.css">
+</head>
+<body>
+    <div class="pixel-snow"></div>
+    
+    <nav class="pixel-nav">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="pixel-font" style="color: var(--pixel-light); font-size: 16px;">
+                🎄 LAUFADVENTSKALENDER 🏃‍♂️
+            </div>
+            <div>
+                <a href="/" class="pixel-nav-item">🏠 STARTSEITE</a>
+                <a href="/overview" class="pixel-nav-item">📊 ÜBERSICHT</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 40px;">
+        <div class="columns is-centered">
+            <div class="column is-three-quarters">
+                <div class="pixel-card">
+                    <h1 class="title pixel-font has-text-centered" style="color: var(--pixel-light);">
+                        🎄 Öffne deinen persönlichen Advendskalender 🏃‍♂️
+                    </h1>
+                    
+                    <form id="nameForm" class="mt-6">
+                        <div style="display: flex; gap: 10px;">
+                            <input 
+                                id="nameInput"
+                                class="pixel-input" 
+                                style="flex: 1;"
+                                type="text" 
+                                placeholder="DEIN NAME" 
+                                maxlength="20"
+                                required
+                            />
+                            <button type="submit" class="pixel-button">
+                                🎅
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="has-text-centered mt-6">
+                        <a href="/overview" class="pixel-button yellow" style="padding: 16px 24px; font-size: 14px;">
+                            📊 ZUR ÜBERSICHT ALLER TEILNEHMER
+                        </a>
+                    </div>
+                    
+                    <div class="pixel-card mt-6" style="background: rgba(20, 90, 65, 0.2);">
+                        <h3 class="title is-4 pixel-font has-text-centered" style="color: var(--pixel-blue);">
+                            🎯 WIE FUNKTIONIERT'S?
+                        </h3>
+                        <div class="content" style="color: var(--pixel-light); font-family: 'VT323', monospace;">
+                            <p><strong>1. bis 24. Dezember:</strong> Jeden Tag eine Strecke laufen oder radeln</p>
+                            <p><strong>Reihenfolge frei wählbar:</strong> Du entscheidest, welche Tage du wann machst</p>
+                            <p><strong>Umrechnung:</strong> 250m Schwimmen = 1km | 5km Rad = 1km Laufen</p>
+                            <p><strong>Kilometer:</strong> Jedes Türchen = seine Tagesnummer als Kilometer (Türchen 16 = 16km)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('nameForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('nameInput').value.trim();
+            if (name) {
+                window.location.href = '/' + encodeURIComponent(name);
+            }
+        });
+    </script>
+</body>
+</html>
