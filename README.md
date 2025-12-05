@@ -15,9 +15,7 @@ Der Laufadventskalender ist eine Webanwendung, die es dir ermöglicht, deine spo
 - Navigation zur Übersicht
 
 **Screenshot:**
-```
-[📸 HIER STARTSEITEN-SCREENSHOT EINFÜGEN]
-```
+![Startseite](img/home.png)
 
 ### 👤 Persönliche Kalenderseite
 - 24 interaktive Adventstürchen (1-24)
@@ -28,9 +26,7 @@ Der Laufadventskalender ist eine Webanwendung, die es dir ermöglicht, deine spo
 - Daten werden automatisch gespeichert
 
 **Screenshot:**
-```
-[📸 HIER PERSÖNLICHE KALENDER-SCREENSHOT EINFÜGEN]
-```
+![Persönlicher Kalender](img/user.png)
 
 ### 📊 Übersichtsseite
 - Alle Teilnehmer auf einen Blick
@@ -39,9 +35,7 @@ Der Laufadventskalender ist eine Webanwendung, die es dir ermöglicht, deine spo
 - Klickbare Nutzerlinks zu den individuellen Kalendern
 
 **Screenshot:**
-```
-[📸 HIER ÜBERSICHTS-SCREENSHOT EINFÜGEN]
-```
+![Übersicht](img/overview.png)
 
 ## 🎮 SPIELREGELN
 
@@ -79,6 +73,10 @@ Der Laufadventskalender ist eine Webanwendung, die es dir ermöglicht, deine spo
 │   ├── 📄 requirements.txt    # Python-Abhängigkeiten
 │   └── 📁 instance/
 │       └── 💾 database.db     # SQLite-Datenbank
+├── 📁 img/
+│   ├── 📸 home.png            # Screenshot Startseite
+│   ├── 📸 user.png            # Screenshot Kalender
+│   └── 📸 overview.png        # Screenshot Übersicht
 ├── 📁 static/
 │   └── 📁 css/
 │       └── 🎨 pixel-art.css   # Pixel-Art Christmas Styles
@@ -86,6 +84,7 @@ Der Laufadventskalender ist eine Webanwendung, die es dir ermöglicht, deine spo
 │   ├── 📄 index.html          # Startseite
 │   ├── 📄 user.html           # Persönlicher Kalender
 │   └── 📄 overview.html       # Übersichtsseite
+├── 📄 README.md               # Diese Datei
 └── 🚀 start-servers.sh        # Start-Script
 ```
 
